@@ -110,41 +110,92 @@ function classificaTriangulo(ladoA, ladoB, ladoC) {
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
+    function ordem(a, b){
+        return(a-b)
+
+    }
+    array.sort(ordem)
+    segundoMaior = array[array.length -2]
+    segundoMenor = array[1]
+    return[segundoMaior, segundoMenor]
 
   
 }
 
 // EXERCÍCIO 11
 function retornaChamadaDeFilme(filme) {
+    const frase = (`Venha assistir ao filme ${filme.nome}, de ${filme.ano}, dirigido por ${filme.diretor} e estrelado por ${filme.atores[0]}, ${filme.atores[1]}, ${filme.atores[2]}, ${filme.atores[3]}.`)
+    return frase
    
 }
 
+
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-   
+    const pessoaNova = {
+        ...pessoa,
+        nome: "ANÔNIMO",
+    }   
+    return pessoaNova
 }
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-   
+    const autorizadas = []
+    for(let pessoa of pessoas) {
+        if((pessoa.idade > 14 && pessoa.idade <60) && pessoa.altura >= 1.5){
+            autorizadas.push(pessoa)
+        }
+    }
+    return autorizadas
 }
+
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
+    const naoAutorizadas = []
+    for( let pessoa of pessoas){
+        if((pessoa.idade <= 14 || pessoa.idade >=60) || pessoa.altura <= 1.5){
+            naoAutorizadas.push(pessoa)
+        }
+    }
+    return naoAutorizadas
   
 }
 
 // EXERCÍCIO 14
 function retornaContasComSaldoAtualizado(contas) {
+    
+    for(let i = 0; i < contas.length; i++){
+        let entradas =[];
+        calculaSaldo(contas);
+        function calculaSaldo(utilizador){
+            utilizador[i].compras.forEach(nr => entradas.push(nr * -1));
+            console.log(entradas);
+        }
+        function somaNumeros(numeros){
+            return numeros.reduce((sum, nr) => sum + nr, 0);
+        }
+        contas[i].compras = []
+        contas[i].saltoTotal += somaNumeros(entradas)
+    }
+    return contas
+    
 
 }
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
+    return consultas.sort((a, b) => a.nome > b.nome ? 1 : a.nome < b.nome ? -1 :0)
+
   
 }
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   
+   for(let i = 0; i < 3 ; i++){
+       consultas.sort((a, b) => a.dataDaConsulta.split('/')[i] > b.dataDaConsulta.split('/')[i]? 1 : a.dataDaConsulta.split('/')[i]? -1 :0 )
+   }
+   return consultas
 }
+//(NAO CONSEGUI RODAR A 15B NO TEST)
