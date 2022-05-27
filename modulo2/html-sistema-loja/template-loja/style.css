@@ -1,0 +1,92 @@
+h1 {
+    background-color: cadetblue;
+    text-align: center;
+    color: rgb(28, 53, 54);
+    padding: 20px;
+}
+
+.texto-centralizado {
+    text-align: center;
+    font-size: 55px
+
+}
+
+#texto-destaque {
+    font-size: 25px;
+    text-align: center;
+    color: rgb(177, 80, 80);
+}
+
+#opcoes-destaque {
+    display: inline;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(230, 145, 106, 0.753);
+    padding: 10px;
+
+}
+
+.funcionarios {
+    text-align: center;
+    font-size: 28px;
+    background-color: indianred;
+    color: rgb(88, 36, 36);
+    padding: 10px;
+}
+
+#texto-principal {
+    text-align: center;
+    font-size: 40px;
+    background-color: cadetblue;
+    color: rgb(28, 53, 54);
+}
+
+#lista-funcionarios{
+    text-align: center;
+    font-size: 40px;
+    background-color: rgb(243, 200, 184);
+    color: rgb(138, 30, 0);
+}
+
+#contatos {
+    text-align: center;
+    font-size: 50px;
+    background-color: cadetblue;
+    color: rgb(28, 53, 54);
+    padding: 10px;
+    
+}
+
+#adicionar-produto{
+    text-align: center;
+    font-size: 40px;
+    background-color: rgb(243, 200, 184);
+    color: rgb(138, 30, 0);
+}
+
+#tabela {
+    text-align: center;
+    background-color: rgb(236, 169, 144);
+}
+
+.unidade{
+    background-color:rgb(192, 115, 86);
+    text-align: center;
+}
+.itens-tabela {
+    background-color: rgb(212, 124, 92);
+    text-align: center;
+}
+
+body {
+    margin: 25px;
+    background-color:rgb(205, 228, 233);
+}
+
+#tabela-medidas {
+    margin: 150px;
+    padding: 10px;
+}
+
+
+
