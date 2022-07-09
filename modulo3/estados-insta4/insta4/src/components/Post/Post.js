@@ -43,7 +43,8 @@ function Post(props){
   const onClickComentario = () => {
     setComentando(!comentando)
     if(comentando) {
-      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} resposta = {respostaUsuario} onChangeComentario = {handleRespostaUsuario}/>
+      componenteComentario = <SecaoComentario aoEnviar={aoEnviarComentario} resposta = {respostaUsuario} 
+      onChangeComentario = {handleRespostaUsuario}/>
     }
     console.log(comentando)
   }
