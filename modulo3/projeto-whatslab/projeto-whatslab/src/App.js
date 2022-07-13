@@ -18,25 +18,25 @@ const itensPostar = postar.map((item, index) => {
 
     );
 });
-const [ImputUser, setImputUser]=useState ("");
-const [ImputMsg, setImputMsg]=useState("");
+const [InputUser, setInputUser]=useState ("");
+const [InputMsg, setInputMsg]=useState("");
 
 const mudaUsuar=(e) =>{
-    setImputUser(e.target.value);
+    setInputUser(e.target.value);
     console.log();
-    console.log(ImputUser);
+    console.log(InputUser);
 }
 const mudaMsg=(e)=>{
-    setImputMsg(e.target.value)
-    console.log(ImputMsg);
+    setInputMsg(e.target.value)
+    console.log(InputMsg);
 }
 const adicionar=(e)=>{
     e.preventDefault()
-    const itensAtualizados=[...postar,{usuario:ImputUser,mensagem:ImputMsg}]
+    const itensAtualizados=[...postar,{usuario:InputUser,mensagem:InputMsg}]
     setPostar(itensAtualizados)
     console.log("botão precionado!");
-    setImputUser("")
-    setImputMsg("")
+    setInputUser("")
+    setInputMsg("")
 }
 const remover=(indexRemover)=>{
     const itensAtualizados=postar.filter((item,index)=>{
@@ -49,8 +49,8 @@ const remover=(indexRemover)=>{
         <AreaMensagem>
                 <PostForm>
                     <p></p>
-                    <imput type="text" required placeholder="usuario" value={ImputUser} onChange={mudaUsuar}></imput>
-                    <imput type="text" required placeholder="Mensagem" value={ImputMsg} onChange={mudaMsg}></imput>
+                    <input type="text" required placeholder="usuario" value={InputUser} onChange={mudaUsuar}></input>
+                    <input type="text" required placeholder="Mensagem" value={InputMsg} onChange={mudaMsg}></input>
                     <button onClick={adicionar}>Enviar </button>
                 </PostForm>
                 <PostContainer>
