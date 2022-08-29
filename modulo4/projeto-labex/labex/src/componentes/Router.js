@@ -4,9 +4,10 @@ import CriarViagem from "./CreateTripPage";
 import LoginAdm from "./LoginPage";
 import AdmListaViagens from "./AdminHomePage";
 import DetalhesViagens from "./TripDetailsPage";
-import ListaViagens from "./ListTripsPage";
+import ListaViagens from "./ListTripsPage/ListTripsPage";
 import InscricaoViagens from "./ApplicationFormPage";
 import Home from "./HomePage";
+import axios from 'axios';
 
 function Router() {
     return (
